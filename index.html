@@ -45,6 +45,56 @@
       --fs-large: 19px;
       --fs-xlarge: 20px;
       --fs-xxlarge: 21px;
+
+      /* Animations */
+      --cubeic-beizer: cubic-bezier(0.250, 0.460, 0.450, 0.940);
+
+
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+      }
+
+      to {
+        opacity: 1;
+      }
+    }
+
+    @-webkit-keyframes fadeIn {
+      from {
+        opacity: 0;
+      }
+
+      to {
+        opacity: 1;
+      }
+    }
+
+
+    @-webkit-keyframes slide-right {
+      0% {
+        -webkit-transform: translateX(-250px);
+        transform: translateX(-250px)
+      }
+
+      100% {
+        -webkit-transform: translateX(0);
+        transform: translateX(0)
+      }
+    }
+
+    @keyframes slide-right {
+      0% {
+        -webkit-transform: translateX(-250px);
+        transform: translateX(-250px)
+      }
+
+      100% {
+        -webkit-transform: translateX(0);
+        transform: translateX(0)
+      }
     }
 
     body {
@@ -67,6 +117,31 @@
       background: var(--teal-highlight);
     }
 
+
+    ::-webkit-scrollbar {
+      width: 3px;
+      height: 5px;
+
+    }
+
+
+    ::-webkit-scrollbar-track {
+      background: #0e162a;
+
+      border-radius: 10px;
+    }
+
+
+    ::-webkit-scrollbar-thumb {
+      background: linear-gradient(transparent, transparent, #254283);
+      border-radius: 10px;
+    }
+
+    ::-webkit-scrollbar-thumb:hover {
+      background: linear-gradient(transparent, transparent, #5bdd66);
+    }
+
+
     #cursor__highlight {
       position: fixed;
       border-radius: 50%;
@@ -76,6 +151,26 @@
       box-shadow: 0 0 256px 256px #244da52f;
       transform: translate(-50%, -50%);
       transition: transform 0.1s ease;
+    }
+
+    .hidden {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+
+    .visible {
+      animation: fadeIn 1s forwards;
+    }
+
+
+    /* Just for demonstration */
+    .section {
+      height: 100vh;
+      border: 1px solid #ddd;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 2em;
     }
 
 
@@ -94,13 +189,7 @@
     }
 
 
-    header .header__name {
-      font-size: 2.8rem;
-      font-weight: 800;
-      margin: 0 0 1.1rem;
-      color: var(--wht);
-      cursor: pointer;
-    }
+
 
 
     @media (min-width: 1440px) {
@@ -273,16 +362,31 @@
 
 
 
+    header .header__name {
+      font-size: 2.8rem;
+      font-weight: 800;
+      margin: 0 0 1.1rem;
+      color: var(--wht);
+      cursor: pointer;
+      -webkit-animation: slide-right 1.450s var(--cubeic-beizer) .1s both, fadeIn 2s var(--cubeic-beizer) both;
+      animation: slide-right 1.450s var(--cubeic-beizer) .1s both, fadeIn 2s var(--cubeic-beizer) both;
+    }
+
 
 
     header .header__program {
       font-size: 1.2rem;
       font-weight: 500;
       color: var(--wht);
+      -webkit-animation: slide-right 1.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both,
+        fadeIn 1s var(--cubeic-beizer) both;
+      animation: slide-right 1.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both, fadeIn 1s var(--cubeic-beizer) both;
     }
 
     header .header__bio {
       font-size: 0.9rem;
+      -webkit-animation: slide-right 1.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+      animation: slide-right 1.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
     }
 
     header .nav__links {
@@ -303,6 +407,8 @@
       align-items: center;
       display: inline-block;
       align-items: center;
+      -webkit-animation: slide-right 1.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+      animation: slide-right 1.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) .2s both, fadeIn 2s var(--cubeic-beizer) both;
     }
 
 
@@ -336,16 +442,48 @@
 
     }
 
-    header .social__icons {
+    .headerTop .social__icons {
       margin-top: 4rem;
+      -webkit-animation: scale-in-center 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+      animation: scale-in-center 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
     }
 
-    header .social__icons a {
+    .headerTop .social__icons a {
       margin-right: 1.2rem;
       color: var(--gry);
       font-size: 1.3rem;
       transition: color 0.2s ease-in-out;
+
     }
+
+    @-webkit-keyframes scale-in-center {
+      0% {
+        -webkit-transform: scale(0);
+        transform: scale(0);
+        opacity: 1;
+      }
+
+      100% {
+        -webkit-transform: scale(1);
+        transform: scale(1);
+        opacity: 1;
+      }
+    }
+
+    @keyframes scale-in-center {
+      0% {
+        -webkit-transform: scale(0);
+        transform: scale(0);
+        opacity: 1;
+      }
+
+      100% {
+        -webkit-transform: scale(1);
+        transform: scale(1);
+        opacity: 1;
+      }
+    }
+
 
     header .social__icons a:hover {
       color: var(--wht);
@@ -926,6 +1064,9 @@
       </div>
       </li>
     </section>
+    <p style="color: var(--textcolor) ;">This design was inspired by <a href="https://brittanychiang.com/"
+        class="mentioned__links">Brittany
+        Chiang</a>. All text is set in the Inter typeface.</p>
   </main>
 
   <script>

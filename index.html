@@ -4,830 +4,24 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta property="og:title" content="Charles Adrian - Portfolio">
-  <meta property="og:description"
-    content="Specializing in UI/UX, I bring a unique blend of creativity and technical skill to every project.">
+  <meta property="og:description" content="Personal Portfolio">
   <meta property="og:image" content="/assets/images/screenshot.png">
-
-  <link rel="icon" href="/assets/images/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="/assets/css/styles.css">
+  <link rel="icon" href="/assets/images/favicon.svg" type="image/x-icon">
 
   <title>Charles Adrian - Portfolio</title>
-
   <script src="https://kit.fontawesome.com/aedc045876.js" crossorigin="anonymous"></script>
-
+  <script src="https://unpkg.com/scrollreveal"></script>
 
   <style>
-    @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 
-    :root {
-
-      /* COLOR */
-
-      --textcolor: hsla(213, 8%, 78%, 0.699);
-      --bg-color: #0e162a;
-      --txt-blk: #0B1215;
-      --teal-highlight: #42bfce;
-      --bar-highlight: #254283;
-      --wht: #faf9f6;
-      --gry: #93A5AE;
-      --supergray: #33333370;
-      --high: #010911;
-      --silak: #fff;
-
-      /* FONT SIZE */
-      --fs-xxxxsmall: 8px;
-      --fs-xxxsmall: 10px;
-      --fs-xxsmall: 12px;
-      --fs-xsmall: 14px;
-      --fs-small: 15px;
-      --fs-medium-small: 16px;
-      --fs-medium: 17px;
-      --fs-medium-large: 18px;
-      --fs-large: 19px;
-      --fs-xlarge: 20px;
-      --fs-xxlarge: 21px;
-
-      /* Animations */
-      --cubeic-beizer: cubic-bezier(0.250, 0.460, 0.450, 0.940);
-
-
-    }
-
-    @keyframes fadeIn {
-      from {
-        opacity: 0;
-      }
-
-      to {
-        opacity: 1;
-      }
-    }
-
-    @-webkit-keyframes fadeIn {
-      from {
-        opacity: 0;
-      }
-
-      to {
-        opacity: 1;
-      }
-    }
-
-
-    @-webkit-keyframes slide-right {
-      0% {
-        -webkit-transform: translateX(-250px);
-        transform: translateX(-250px)
-      }
-
-      100% {
-        -webkit-transform: translateX(0);
-        transform: translateX(0)
-      }
-    }
-
-    @keyframes slide-right {
-      0% {
-        -webkit-transform: translateX(-250px);
-        transform: translateX(-250px)
-      }
-
-      100% {
-        -webkit-transform: translateX(0);
-        transform: translateX(0)
-      }
-    }
-
-    body {
-      display: grid;
-      grid-template-columns: 1fr 2fr;
-      margin: 0;
-      font-family: "Inter", sans-serif;
-      background-color: var(--bg-color);
-      color: var(--textcolor);
-      padding: 8rem;
-      grid-template-rows: 1fr auto;
-    }
-
-    html {
-      scroll-behavior: smooth;
-    }
-
-    ::selection {
-      color: var(--high);
-      background: var(--teal-highlight);
-    }
-
-
-    ::-webkit-scrollbar {
-      width: 3px;
-      height: 5px;
-
-    }
-
-
-    ::-webkit-scrollbar-track {
-      background: #0e162a;
-
-      border-radius: 10px;
-    }
-
-
-    ::-webkit-scrollbar-thumb {
-      background: linear-gradient(transparent, transparent, #254283);
-      border-radius: 10px;
-    }
-
-    ::-webkit-scrollbar-thumb:hover {
-      background: linear-gradient(transparent, transparent, #5bdd66);
-    }
-
-
-    #cursor__highlight {
-      position: fixed;
-      border-radius: 50%;
-      background-color: #244da52f;
-      -webkit-box-shadow: 0 0 256px 256px #244da52f;
-      -moz-box-shadow: 0 0 256px 256px #244da52f;
-      box-shadow: 0 0 256px 256px #244da52f;
-      transform: translate(-50%, -50%);
-      transition: transform 0.1s ease;
-    }
-
-    .hidden {
-      opacity: 0;
-      transform: translateY(20px);
-    }
-
-    .visible {
-      animation: fadeIn 1s forwards;
-    }
-
-
-    /* Just for demonstration */
-    .section {
-      height: 100vh;
-      border: 1px solid #ddd;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 2em;
-    }
-
-
-    /* HEADER */
-
-
-    header {
-      display: flex;
-      flex-direction: column;
-      justify-content: flex-start;
-      grid-column: 1 / 3;
-      color: var(--textcolor);
-      height: 100vh;
-      position: fixed;
-      padding-left: 4rem;
-    }
-
-
-
-
-
-    @media (min-width: 1440px) {
-
-      main section h2 {
-        font-size: 1.5rem;
-      }
-
-      main {
-        margin-left: 4rem;
-      }
-
-      main section p {
-        font-size: 1.145rem;
-      }
-
-      main section .bar__graph .h2-skill {
-        font-size: 1.3rem;
-      }
-
-      .mainContent section {
-        max-width: 100%;
-      }
-
-      .headerTop .header__program {
-        font-size: 1.6rem;
-      }
-
-      .headerTop .header__bio {
-        font-size: 1.2rem;
-      }
-
-      .headerTop .nav__links a {
-        font-size: 0.950rem;
-      }
-
-      .headerTop .social__icons a {
-        font-size: 1.6rem;
-        margin-right: 1.8rem;
-      }
-
-
-    }
-
-
-
-
-
-    @media (max-width: 1300px) {
-
-      body {
-        padding: 7rem;
-      }
-
-      header {
-        padding-left: 0;
-      }
-
-      main {
-        margin-left: 3rem;
-      }
-    }
-
-
-
-    @media (max-width: 1023px) {
-
-      body {
-        display: grid;
-        grid-template-columns: 0 1fr;
-        padding: 15% 8% 8% 8%;
-      }
-
-      header {
-        position: relative;
-        padding-bottom: 0;
-        height: fit-content;
-      }
-
-      main {
-        position: static;
-      }
-
-      .mainContent {
-        padding: 2rem 0 0 0;
-        margin: 0;
-      }
-
-      .mainContent section {
-        max-width: 100%;
-
-      }
-
-
-
-      .mainContent #about {
-        padding-top: 3.5rem;
-      }
-
-
-
-      .headerTop .header__name {
-        padding: 0;
-        line-height: 1;
-      }
-
-      .headerTop .header__bio {
-        font-size: 1rem;
-        padding: 0;
-        margin: 0.4rem 0 0.4rem 0;
-
-      }
-
-
-      .headerTop .social__icons {
-        margin-top: 1rem;
-
-      }
-
-      .headerTop .social__icons a {
-        font-size: 1.4rem;
-      }
-
-      .headerTop .nav__links {
-        display: none;
-      }
-
-
-
-    }
-
-    @media (max-width: 768px) {
-
-
-
-      .headerTop .header__name {
-        font-size: 2rem;
-      }
-
-      .headerTop .header__program {
-        font-size: 1rem;
-      }
-
-      .headerTop .header__bio {
-        font-size: 0.95rem;
-      }
-
-      .headerTop .social__icons a {
-        font-size: 1.3rem;
-      }
-
-      .mainContent .project__card {
-        grid-template-columns: 1fr;
-      }
-
-
-      .mainContent .experience__card .experience__content {
-        padding-left: .5rem;
-      }
-
-      .mainContent .experience__card {
-        grid-template-columns: 1fr;
-      }
-
-
-      .mainContent .experience__card .experience__content {
-        padding-left: 1.5rem;
-      }
-    }
-
-
-
-    header .header__name {
-      font-size: 2.8rem;
-      font-weight: 800;
-      margin: 0 0 1.1rem;
-      color: var(--wht);
-      cursor: pointer;
-      -webkit-animation: slide-right 1.450s var(--cubeic-beizer) .1s both, fadeIn 2s var(--cubeic-beizer) both;
-      animation: slide-right 1.450s var(--cubeic-beizer) .1s both, fadeIn 2s var(--cubeic-beizer) both;
-    }
-
-
-
-    header .header__program {
-      font-size: 1.2rem;
-      font-weight: 500;
-      color: var(--wht);
-      -webkit-animation: slide-right 1.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both,
-        fadeIn 1s var(--cubeic-beizer) both;
-      animation: slide-right 1.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both, fadeIn 1s var(--cubeic-beizer) both;
-    }
-
-    header .header__bio {
-      font-size: 0.9rem;
-      -webkit-animation: slide-right 1.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
-      animation: slide-right 1.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
-    }
-
-    header .nav__links {
-      list-style: none;
-      padding: 0;
-    }
-
-    header .nav__links li {
-      margin: 1rem 0;
-    }
-
-    header .nav__links a {
-      text-decoration: none;
-      color: var(--textcolor);
-      font-size: .745rem;
-      transition: all 0.115s ease-in-out;
-      font-weight: 700;
-      align-items: center;
-      display: inline-block;
-      align-items: center;
-      -webkit-animation: slide-right 1.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
-      animation: slide-right 1.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) .2s both, fadeIn 2s var(--cubeic-beizer) both;
-    }
-
-
-    .nav-indicator {
-      display: inline-flex;
-      height: 1px;
-      width: 2rem;
-      background-color: var(--gry);
-      margin-right: 1rem;
-      transition: all 0.215s ease-in-out;
-      margin-bottom: 3px;
-    }
-
-    header .nav__links a:hover .nav-indicator,
-    header .nav__links a:focus-visible .nav-indicator {
-      width: 4rem;
-      background-color: var(--teal-highlight);
-    }
-
-    header .nav__links a:hover {
-      color: var(--teal-highlight);
-    }
-
-    header .nav__links a.active .nav-indicator {
-      width: 4rem;
-      background-color: var(--teal-highlight);
-    }
-
-    header .nav__links a.active {
-      color: var(--teal-highlight);
-
-    }
-
-    .headerTop .social__icons {
-      margin-top: 4rem;
-      -webkit-animation: scale-in-center 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
-      animation: scale-in-center 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
-    }
-
-    .headerTop .social__icons a {
-      margin-right: 1.2rem;
-      color: var(--gry);
-      font-size: 1.3rem;
-      transition: color 0.2s ease-in-out;
-
-    }
-
-    @-webkit-keyframes scale-in-center {
-      0% {
-        -webkit-transform: scale(0);
-        transform: scale(0);
-        opacity: 1;
-      }
-
-      100% {
-        -webkit-transform: scale(1);
-        transform: scale(1);
-        opacity: 1;
-      }
-    }
-
-    @keyframes scale-in-center {
-      0% {
-        -webkit-transform: scale(0);
-        transform: scale(0);
-        opacity: 1;
-      }
-
-      100% {
-        -webkit-transform: scale(1);
-        transform: scale(1);
-        opacity: 1;
-      }
-    }
-
-
-    header .social__icons a:hover {
-      color: var(--wht);
-    }
-
-
-
-
-
-    /* MAIN CONTENT */
-
-    main {
-      grid-column: 2 / 3;
-      padding-left: 5rem;
-
-
-    }
-
-    main section {
-      margin-bottom: 3rem;
-      max-width: 35rem;
-
-    }
-
-    main h2 {
-      font-size: 1.2rem;
-      letter-spacing: 0.8px;
-      display: inline-block;
-      padding-bottom: 0.5rem;
-      margin-bottom: 0.3rem;
-      margin-top: 0;
-      text-transform: uppercase;
-      color: var(--wht);
-      border-bottom: 1px solid var(--gry);
-    }
-
-    main p {
-      font-size: 0.9rem;
-      line-height: 1.6;
-      font-weight: 500;
-    }
-
-    .mentioned__links {
-      text-decoration: none;
-      color: var(--silak);
-      transition: color 0.115s ease-in-out;
-    }
-
-    .mentioned__links:hover {
-      color: var(--teal-highlight);
-    }
-
-    .spot {
-      position: relative;
-      display: inline-block;
-      cursor: pointer;
-      color: var(--silak);
-      transition: color 0.115s ease-in-out;
-    }
-
-    #spot {
-      position: absolute;
-      width: 150px;
-      height: 100px;
-      background-image: url('/assets/images/spot.png');
-      background-size: cover;
-      background-position: center;
-      display: none;
-      pointer-events: none;
-    }
-
-    .spot:hover {
-      color: var(--teal-highlight);
-    }
-
-    .spot:hover::after {
-      display: block;
-    }
-
-    /* SKILLS SECTION */
-
-    .skills__container i {
-      padding-right: 0.5rem;
-      font-size: 1.345rem;
-    }
-
-    .skills__container {
-      padding: 1rem 0 0 0;
-      width: 100%;
-    }
-
-    .bar__graph {
-      margin-bottom: 1.5rem;
-    }
-
-    .bar__graph p {
-      margin: 0 0 0.2rem 0.5rem;
-      font-size: 1rem;
-      color: var(--wht);
-    }
-
-    .progress__bar {
-      background-color: var(--gry);
-      border-radius: 10px;
-      overflow: hidden;
-      height: 7px;
-      position: relative;
-
-    }
-
-    .progress__fill {
-      background-color: var(--bar-highlight);
-      height: 100%;
-      width: 0;
-      transition: width 2s ease-in-out;
-      border-radius: 2px;
-    }
-
-    .percentage {
-      font-size: 0.8rem;
-      color: var(--textcolor);
-      display: inline-block;
-      margin-top: 0.5rem;
-    }
-
-
-
-    /* PROJECT SECTION */
-
-
-    .projects__list {
-      list-style: none;
-      margin: 0;
-      padding: 0;
-    }
-
-
-    .projects__list:hover .project__card {
-      opacity: 0.5;
-      filter: blur(2px);
-
-    }
-
-    .projects__list .project__card:hover {
-      opacity: 1;
-      filter: blur(0);
-    }
-
-    .project__item {
-      margin: 1rem 0 2rem 0;
-      transition: background-color 0.3s ease-in-out;
-      transition: opacity 0.3s ease, background-color 0.3s ease;
-      border-radius: 15px
-    }
-
-    /* Project Card */
-    .project__card {
-      position: relative;
-      display: grid;
-      grid-template-columns: 2fr 0.1fr;
-      gap: 1rem;
-      padding: 0 2rem 2rem 2rem;
-      transition: background-color 0.3s ease-in-out;
-
-    }
-
-    .project__item:hover {
-      background-color: rgba(30, 102, 150, 0.171);
-      border-radius: 15px;
-      border-top: 1px solid var(--wht);
-    }
-
-    .project__header {
-      font-size: 0.85rem;
-      font-weight: 600;
-      text-transform: uppercase;
-      color: var(--textcolor);
-      z-index: 1;
-
-    }
-
-    .project__content {
-      position: relative;
-      z-index: 1;
-      transition: filter 0.3s ease;
-      padding: 1rem 1rem 1rem 0;
-      right: 0;
-    }
-
-
-    .project__title {
-      font-size: 0.95rem;
-      font-weight: 600;
-      color: var(--silak);
-    }
-
-    .project__link {
-      display: inline-flex;
-      align-items: center;
-      text-decoration: none;
-      color: var(--silak);
-      transition: color 0.3s ease;
-    }
-
-    .project__link:hover {
-      color: var(--teal-highlight);
-    }
-
-    .project__icon {
-      height: 1rem;
-      width: 1rem;
-      margin-left: 0.1rem;
-      transition: transform 0.3s ease;
-    }
-
-    .project__link:hover .project__icon {
-      transform: translateY(-3px) translateX(2px);
-    }
-
-    .project__content .project__description {
-      font-size: 0.8rem;
-      color: var(--textcolor);
-      font-weight: 400;
-    }
-
-    .project__tags {
-      display: flex;
-      flex-wrap: wrap;
-      margin-top: 0.5rem;
-      padding: 0;
-      list-style: none;
-    }
-
-    .tag__item {
-      background-color: rgba(34, 211, 238, 0.1);
-      color: var(--teal-highlight);
-      font-size: 0.75rem;
-      font-weight: 500;
-      padding: 0.3rem 0.7rem;
-      margin: 0.25rem 0.5rem 0 0;
-      border-radius: 9999px;
-    }
-
-
-
-    /* EXPERIENCE SECTION */
-
-    .experience__list {
-      list-style: none;
-      margin: 0;
-      padding: 0;
-    }
-
-
-    .experience__list:hover .experience__card {
-      opacity: 0.5;
-      filter: blur(2px);
-
-    }
-
-    .experience__list .experience__card:hover {
-      opacity: 1;
-      filter: blur(0);
-    }
-
-    .experience__item {
-      margin: 1rem 0 2rem 0;
-      transition: background-color 0.3s ease-in-out;
-      transition: opacity 0.3s ease, background-color 0.3s ease;
-      border-radius: 15px
-    }
-
-    /* experience Card */
-    .experience__card {
-      position: relative;
-      display: grid;
-      grid-template-columns: 2fr 0.1fr;
-      gap: 1rem;
-      padding-bottom: 1rem;
-      transition: background-color 0.3s ease-in-out;
-    }
-
-    .experience__item:hover {
-      background-color: rgba(30, 102, 150, 0.171);
-      border-radius: 15px;
-      border-top: 1px solid var(--wht);
-    }
-
-    .experience__content {
-      position: relative;
-      z-index: 1;
-      transition: filter 0.3s ease;
-      padding: 1vw;
-    }
-
-    .experience__title {
-      font-size: 0.95rem;
-      font-weight: 600;
-      color: var(--silak);
-    }
-
-    .experience__link {
-      display: inline-flex;
-      align-items: center;
-      text-decoration: none;
-      color: var(--silak);
-      transition: color 0.3s ease;
-    }
-
-    .experience__link:hover {
-      color: var(--teal-highlight);
-    }
-
-    .experience__icon {
-      height: 1rem;
-      width: 1rem;
-      margin-left: 0.1rem;
-      transition: transform 0.3s ease;
-    }
-
-    .experience__link:hover .experience__icon {
-      transform: translateY(-3px) translateX(2px);
-    }
-
-    .experience__content .experience__description {
-      font-size: 0.8rem;
-      color: var(--textcolor);
-      font-weight: 400;
-    }
-
-    .experience__tags {
-      display: flex;
-      flex-wrap: wrap;
-      margin-top: 0.5rem;
-      padding: 0;
-      list-style: none;
-    }
   </style>
+
 
 </head>
 
 <body>
   <div id="cursor__highlight"></div>
-  <div class="sticky__background"></div>
 
   <!-- HEADER -->
   <header class="headerTop" id="header">
@@ -838,19 +32,180 @@
     <nav>
       <ul class="nav__links">
         <li><a href="#about" class="nav__link active"><span class="nav-indicator"></span>ABOUT</a></li>
+        <!-- <li><a href="#education" class="nav__link"><span class="nav-indicator"></span>EDUCATION</a></li> -->
         <li><a href="#skills" class="nav__link"><span class="nav-indicator"></span>SKILLS</a></li>
         <li><a href="#projects" class="nav__link"><span class="nav-indicator"></span>PROJECTS</a></li>
         <li><a href="#experience" class="nav__link"><span class="nav-indicator"></span>EXPERIENCE</a></li>
       </ul>
+
     </nav>
     <div class="social__icons">
-      <a href="https://www.facebook.com/psykwicc" target="_blank"><i class="fa-brands fa-facebook-messenger"></i></a>
-      <a href="http://instagram.com/_u/psykwicc" target="_blank"><i class="fa-brands fa-instagram"></i></a>
-      <a href="https://t.me/psykwicc" target="_blank"><i class="fa-brands fa-telegram"></i></a>
-      <a href="https://github.com/psykwicc" target="_blank"><i class="fa-brands fa-github"></i></a>
-      <a href="tel:+639267025048"><i class="fa-solid fa-phone"></i></a>
+      <a href="https://m.me/psykwicc" target="_blank">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20" color="#c2c6cb" fill="none">
+          <path
+            d="M7 14L8.9954 11.6055C9.63153 10.8422 9.9496 10.4605 10.3333 10.4605C10.7171 10.4605 11.0351 10.8422 11.6713 11.6055L12.3287 12.3945C12.9649 13.1578 13.2829 13.5395 13.6667 13.5395C14.0504 13.5395 14.3685 13.1578 15.0046 12.3945L17 10"
+            stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+          <path
+            d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 13.3789 2.27907 14.6926 2.78382 15.8877C3.06278 16.5481 3.20226 16.8784 3.21953 17.128C3.2368 17.3776 3.16334 17.6521 3.01642 18.2012L2 22L5.79877 20.9836C6.34788 20.8367 6.62244 20.7632 6.87202 20.7805C7.12161 20.7977 7.45185 20.9372 8.11235 21.2162C9.30745 21.7209 10.6211 22 12 22Z"
+            stroke="currentColor" stroke-width="1.5" stroke-linejoin="round" />
+        </svg>
+      </a>
+
+
+      <a href="http://instagram.com/psykwicc" target="_blank">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20" color="#c2c6cb" fill="none">
+          <path
+            d="M2.5 12C2.5 7.52166 2.5 5.28249 3.89124 3.89124C5.28249 2.5 7.52166 2.5 12 2.5C16.4783 2.5 18.7175 2.5 20.1088 3.89124C21.5 5.28249 21.5 7.52166 21.5 12C21.5 16.4783 21.5 18.7175 20.1088 20.1088C18.7175 21.5 16.4783 21.5 12 21.5C7.52166 21.5 5.28249 21.5 3.89124 20.1088C2.5 18.7175 2.5 16.4783 2.5 12Z"
+            stroke="currentColor" stroke-width="1.5" stroke-linejoin="round" />
+          <path
+            d="M16.5 12C16.5 14.4853 14.4853 16.5 12 16.5C9.51472 16.5 7.5 14.4853 7.5 12C7.5 9.51472 9.51472 7.5 12 7.5C14.4853 7.5 16.5 9.51472 16.5 12Z"
+            stroke="currentColor" stroke-width="1.5" />
+          <path d="M17.5078 6.5L17.4988 6.5" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+            stroke-linejoin="round" />
+        </svg>
+      </a>
+
+
+      <a href="https://t.me/psykwicc" target="_blank">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20" color="#c2c6cb" fill="none">
+          <path
+            d="M11.9854 15.4083L15.2268 19.0936C16.4277 20.4589 17.0282 21.1416 17.6567 20.9754C18.2852 20.8092 18.5008 19.9108 18.9318 18.1138L21.3229 8.1459C21.9868 5.37832 22.3187 3.99454 21.5808 3.312C20.843 2.62947 19.564 3.13725 17.0061 4.15282L5.13876 8.86449C3.09293 9.67674 2.07001 10.0829 2.00507 10.7808C1.99842 10.8522 1.99831 10.9241 2.00474 10.9955C2.06754 11.6937 3.08921 12.1033 5.13255 12.9223C6.05838 13.2934 6.5213 13.479 6.8532 13.8344C6.89052 13.8743 6.9264 13.9157 6.96078 13.9584C7.26658 14.3384 7.39709 14.8371 7.65808 15.8344L8.14653 17.701C8.4005 18.6715 8.52749 19.1568 8.86008 19.223C9.19267 19.2891 9.48225 18.8867 10.0614 18.0819L11.9854 15.4083ZM11.9854 15.4083L11.6676 15.0771C11.3059 14.7001 11.1251 14.5117 11.1251 14.2775C11.1251 14.0433 11.3059 13.8548 11.6676 13.4778L15.2406 9.75409"
+            stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+        </svg>
+      </a>
+
+
+      <a href="https://github.com/psykwicc" target="_blank">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20" color="#c2c6cb" fill="none">
+          <path d="M10 20.5675C6.57143 21.7248 3.71429 20.5675 2 17" stroke="currentColor" stroke-width="1.5"
+            stroke-linecap="round" stroke-linejoin="round" />
+          <path
+            d="M10 22V18.7579C10 18.1596 10.1839 17.6396 10.4804 17.1699C10.6838 16.8476 10.5445 16.3904 10.1771 16.2894C7.13394 15.4528 5 14.1077 5 9.64606C5 8.48611 5.38005 7.39556 6.04811 6.4464C6.21437 6.21018 6.29749 6.09208 6.31748 5.9851C6.33746 5.87813 6.30272 5.73852 6.23322 5.45932C5.95038 4.32292 5.96871 3.11619 6.39322 2.02823C6.39322 2.02823 7.27042 1.74242 9.26698 2.98969C9.72282 3.27447 9.95075 3.41686 10.1515 3.44871C10.3522 3.48056 10.6206 3.41384 11.1573 3.28041C11.8913 3.09795 12.6476 3 13.5 3C14.3524 3 15.1087 3.09795 15.8427 3.28041C16.3794 3.41384 16.6478 3.48056 16.8485 3.44871C17.0493 3.41686 17.2772 3.27447 17.733 2.98969C19.7296 1.74242 20.6068 2.02823 20.6068 2.02823C21.0313 3.11619 21.0496 4.32292 20.7668 5.45932C20.6973 5.73852 20.6625 5.87813 20.6825 5.9851C20.7025 6.09207 20.7856 6.21019 20.9519 6.4464C21.6199 7.39556 22 8.48611 22 9.64606C22 14.1077 19.8661 15.4528 16.8229 16.2894C16.4555 16.3904 16.3162 16.8476 16.5196 17.1699C16.8161 17.6396 17 18.1596 17 18.7579V22"
+            stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+
+
+        </svg>
+      </a>
+
+
+      <a href="tel:+639267025048">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20" color="#c2c6cb" fill="none">
+          <path
+            d="M9.1585 5.71223L8.75584 4.80625C8.49256 4.21388 8.36092 3.91768 8.16405 3.69101C7.91732 3.40694 7.59571 3.19794 7.23592 3.08785C6.94883 3 6.6247 3 5.97645 3C5.02815 3 4.554 3 4.15597 3.18229C3.68711 3.39702 3.26368 3.86328 3.09497 4.3506C2.95175 4.76429 2.99278 5.18943 3.07482 6.0397C3.94815 15.0902 8.91006 20.0521 17.9605 20.9254C18.8108 21.0075 19.236 21.0485 19.6496 20.9053C20.137 20.7366 20.6032 20.3131 20.818 19.8443C21.0002 19.4462 21.0002 18.9721 21.0002 18.0238C21.0002 17.3755 21.0002 17.0514 20.9124 16.7643C20.8023 16.4045 20.5933 16.0829 20.3092 15.8362C20.0826 15.6393 19.7864 15.5077 19.194 15.2444L18.288 14.8417C17.6465 14.5566 17.3257 14.4141 16.9998 14.3831C16.6878 14.3534 16.3733 14.3972 16.0813 14.5109C15.7762 14.6297 15.5066 14.8544 14.9672 15.3038C14.4304 15.7512 14.162 15.9749 13.834 16.0947C13.5432 16.2009 13.1588 16.2403 12.8526 16.1951C12.5071 16.1442 12.2426 16.0029 11.7135 15.7201C10.0675 14.8405 9.15977 13.9328 8.28011 12.2867C7.99738 11.7577 7.85602 11.4931 7.80511 11.1477C7.75998 10.8414 7.79932 10.457 7.90554 10.1663C8.02536 9.83828 8.24905 9.56986 8.69643 9.033C9.14586 8.49368 9.37058 8.22402 9.48939 7.91891C9.60309 7.62694 9.64686 7.3124 9.61719 7.00048C9.58618 6.67452 9.44362 6.35376 9.1585 5.71223Z"
+            stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
+        </svg>
+      </a>
+
+      <a
+        href="mailto:flores.charlesadrian@gmail.com?subject=Portfolio%20Inquiry%20-%20Let's%20Collaborate!&body=Hi%20there%2C%0D%0A%0D%0AI%20was%20exploring%20your%20portfolio%20and%20was%20really%20impressed%20with%20your%20work!%20I%E2%80%99d%20love%20to%20discuss%20potential%20opportunities%20for%20collaboration%20or%20ask%20a%20few%20questions%20about%20your%20projects.%0D%0A%0D%0ALooking%20forward%20to%20hearing%20from%20you!%0D%0A%0D%0ABest%20regards%2C%0D%0A%5BYour%20Name%5D"><svg
+          xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20" color="#c2c6cb" fill="none">
+          <path d="M7.00235 7.75L9.94437 9.48943C11.6596 10.5035 12.3451 10.5035 14.0603 9.48943L17.0023 7.75"
+            stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+          <path
+            d="M21.9977 10.75V9.77844C21.9323 6.71114 21.8996 5.17749 20.7679 4.04141C19.6361 2.90532 18.061 2.86574 14.9107 2.78659C12.9692 2.73781 11.0467 2.7378 9.10511 2.78658C5.95487 2.86573 4.37975 2.9053 3.24799 4.04139C2.11624 5.17748 2.08353 6.71113 2.01812 9.77843C1.99709 10.7647 1.99709 11.7451 2.01812 12.7314C2.08354 15.7987 2.11624 17.3323 3.248 18.4684C4.37975 19.6045 5.95487 19.6441 9.10512 19.7232C9.57337 19.735 10.5358 19.7439 11.0024 19.75"
+            stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+          <path
+            d="M20.8546 13.6893L21.547 14.3817C22.1327 14.9675 22.1327 15.9172 21.547 16.503L17.9196 20.1987C17.6342 20.484 17.2692 20.6764 16.8725 20.7505L14.6244 21.2385C14.2694 21.3156 13.9533 21.0004 14.0294 20.6452L14.5079 18.4099C14.582 18.0132 14.7743 17.6482 15.0597 17.3629L18.7333 13.6893C19.3191 13.1036 20.2688 13.1036 20.8546 13.6893Z"
+            stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+        </svg></a>
 
     </div>
+
+    <div class="navBarContainer">
+
+      <!-- HOME -->
+      <nav class="navbar">
+        <a href="#"><svg class="svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20"
+            color="#c2c6cb" fill="none">
+            <path d="M12.0002 18L12.0002 15" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
+            <path
+              d="M2.35157 13.2135C1.99855 10.9162 1.82204 9.76763 2.25635 8.74938C2.69065 7.73112 3.65421 7.03443 5.58132 5.64106L7.02117 4.6C9.41847 2.86667 10.6171 2 12.0002 2C13.3832 2 14.5819 2.86667 16.9792 4.6L18.419 5.64106C20.3462 7.03443 21.3097 7.73112 21.744 8.74938C22.1783 9.76763 22.0018 10.9162 21.6488 13.2135L21.3478 15.1724C20.8473 18.4289 20.5971 20.0572 19.4292 21.0286C18.2613 22 16.5538 22 13.139 22H10.8614C7.44652 22 5.73909 22 4.57118 21.0286C3.40327 20.0572 3.15305 18.4289 2.65261 15.1724L2.35157 13.2135Z"
+              stroke="currentColor" stroke-width="1.5" stroke-linejoin="round" />
+          </svg></a>
+
+        <div class="divider"></div>
+
+
+        <!-- MESS -->
+        <a href="https://m.me/psykwicc" target="_blank"><svg class="svg" xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24" width="20" height="20" color="#c2c6cb" fill="none">
+            <path
+              d="M7 14L8.9954 11.6055C9.63153 10.8422 9.9496 10.4605 10.3333 10.4605C10.7171 10.4605 11.0351 10.8422 11.6713 11.6055L12.3287 12.3945C12.9649 13.1578 13.2829 13.5395 13.6667 13.5395C14.0504 13.5395 14.3685 13.1578 15.0046 12.3945L17 10"
+              stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+            <path
+              d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 13.3789 2.27907 14.6926 2.78382 15.8877C3.06278 16.5481 3.20226 16.8784 3.21953 17.128C3.2368 17.3776 3.16334 17.6521 3.01642 18.2012L2 22L5.79877 20.9836C6.34788 20.8367 6.62244 20.7632 6.87202 20.7805C7.12161 20.7977 7.45185 20.9372 8.11235 21.2162C9.30745 21.7209 10.6211 22 12 22Z"
+              stroke="currentColor" stroke-width="1.5" stroke-linejoin="round" />
+          </svg></a>
+
+        <!-- IG -->
+        <a href="http://instagram.com/psykwicc" target="_blank"><svg class="svg" xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24" width="20" height="20" color="#c2c6cb" fill="none">
+            <path
+              d="M2.5 12C2.5 7.52166 2.5 5.28249 3.89124 3.89124C5.28249 2.5 7.52166 2.5 12 2.5C16.4783 2.5 18.7175 2.5 20.1088 3.89124C21.5 5.28249 21.5 7.52166 21.5 12C21.5 16.4783 21.5 18.7175 20.1088 20.1088C18.7175 21.5 16.4783 21.5 12 21.5C7.52166 21.5 5.28249 21.5 3.89124 20.1088C2.5 18.7175 2.5 16.4783 2.5 12Z"
+              stroke="currentColor" stroke-width="1.5" stroke-linejoin="round" />
+            <path
+              d="M16.5 12C16.5 14.4853 14.4853 16.5 12 16.5C9.51472 16.5 7.5 14.4853 7.5 12C7.5 9.51472 9.51472 7.5 12 7.5C14.4853 7.5 16.5 9.51472 16.5 12Z"
+              stroke="currentColor" stroke-width="1.5" />
+            <path d="M17.5078 6.5L17.4988 6.5" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+              stroke-linejoin="round" />
+          </svg></a>
+
+        <!-- tg -->
+        <a href="https://t.me/psykwicc" target="_blank"><svg class="svg" xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24" width="20" height="20" color="#c2c6cb" fill="none">
+            <path
+              d="M11.9854 15.4083L15.2268 19.0936C16.4277 20.4589 17.0282 21.1416 17.6567 20.9754C18.2852 20.8092 18.5008 19.9108 18.9318 18.1138L21.3229 8.1459C21.9868 5.37832 22.3187 3.99454 21.5808 3.312C20.843 2.62947 19.564 3.13725 17.0061 4.15282L5.13876 8.86449C3.09293 9.67674 2.07001 10.0829 2.00507 10.7808C1.99842 10.8522 1.99831 10.9241 2.00474 10.9955C2.06754 11.6937 3.08921 12.1033 5.13255 12.9223C6.05838 13.2934 6.5213 13.479 6.8532 13.8344C6.89052 13.8743 6.9264 13.9157 6.96078 13.9584C7.26658 14.3384 7.39709 14.8371 7.65808 15.8344L8.14653 17.701C8.4005 18.6715 8.52749 19.1568 8.86008 19.223C9.19267 19.2891 9.48225 18.8867 10.0614 18.0819L11.9854 15.4083ZM11.9854 15.4083L11.6676 15.0771C11.3059 14.7001 11.1251 14.5117 11.1251 14.2775C11.1251 14.0433 11.3059 13.8548 11.6676 13.4778L15.2406 9.75409"
+              stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+          </svg></a>
+
+        <!-- gh -->
+        <a href="https://github.com/psykwicc" target="_blank"><svg class="svg" xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24" width="20" height="20" color="#c2c6cb" fill="none">
+            <path d="M10 20.5675C6.57143 21.7248 3.71429 20.5675 2 17" stroke="currentColor" stroke-width="1.5"
+              stroke-linecap="round" stroke-linejoin="round" />
+            <path
+              d="M10 22V18.7579C10 18.1596 10.1839 17.6396 10.4804 17.1699C10.6838 16.8476 10.5445 16.3904 10.1771 16.2894C7.13394 15.4528 5 14.1077 5 9.64606C5 8.48611 5.38005 7.39556 6.04811 6.4464C6.21437 6.21018 6.29749 6.09208 6.31748 5.9851C6.33746 5.87813 6.30272 5.73852 6.23322 5.45932C5.95038 4.32292 5.96871 3.11619 6.39322 2.02823C6.39322 2.02823 7.27042 1.74242 9.26698 2.98969C9.72282 3.27447 9.95075 3.41686 10.1515 3.44871C10.3522 3.48056 10.6206 3.41384 11.1573 3.28041C11.8913 3.09795 12.6476 3 13.5 3C14.3524 3 15.1087 3.09795 15.8427 3.28041C16.3794 3.41384 16.6478 3.48056 16.8485 3.44871C17.0493 3.41686 17.2772 3.27447 17.733 2.98969C19.7296 1.74242 20.6068 2.02823 20.6068 2.02823C21.0313 3.11619 21.0496 4.32292 20.7668 5.45932C20.6973 5.73852 20.6625 5.87813 20.6825 5.9851C20.7025 6.09207 20.7856 6.21019 20.9519 6.4464C21.6199 7.39556 22 8.48611 22 9.64606C22 14.1077 19.8661 15.4528 16.8229 16.2894C16.4555 16.3904 16.3162 16.8476 16.5196 17.1699C16.8161 17.6396 17 18.1596 17 18.7579V22"
+              stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+          </svg></a>
+
+        <!-- PHONE -->
+        <a href="tel:+639267025048"><svg class="svg" class="svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+            width="20" height="20" color="#c2c6cb" fill="none">
+            <path
+              d="M9.1585 5.71223L8.75584 4.80625C8.49256 4.21388 8.36092 3.91768 8.16405 3.69101C7.91732 3.40694 7.59571 3.19794 7.23592 3.08785C6.94883 3 6.6247 3 5.97645 3C5.02815 3 4.554 3 4.15597 3.18229C3.68711 3.39702 3.26368 3.86328 3.09497 4.3506C2.95175 4.76429 2.99278 5.18943 3.07482 6.0397C3.94815 15.0902 8.91006 20.0521 17.9605 20.9254C18.8108 21.0075 19.236 21.0485 19.6496 20.9053C20.137 20.7366 20.6032 20.3131 20.818 19.8443C21.0002 19.4462 21.0002 18.9721 21.0002 18.0238C21.0002 17.3755 21.0002 17.0514 20.9124 16.7643C20.8023 16.4045 20.5933 16.0829 20.3092 15.8362C20.0826 15.6393 19.7864 15.5077 19.194 15.2444L18.288 14.8417C17.6465 14.5566 17.3257 14.4141 16.9998 14.3831C16.6878 14.3534 16.3733 14.3972 16.0813 14.5109C15.7762 14.6297 15.5066 14.8544 14.9672 15.3038C14.4304 15.7512 14.162 15.9749 13.834 16.0947C13.5432 16.2009 13.1588 16.2403 12.8526 16.1951C12.5071 16.1442 12.2426 16.0029 11.7135 15.7201C10.0675 14.8405 9.15977 13.9328 8.28011 12.2867C7.99738 11.7577 7.85602 11.4931 7.80511 11.1477C7.75998 10.8414 7.79932 10.457 7.90554 10.1663C8.02536 9.83828 8.24905 9.56986 8.69643 9.033C9.14586 8.49368 9.37058 8.22402 9.48939 7.91891C9.60309 7.62694 9.64686 7.3124 9.61719 7.00048C9.58618 6.67452 9.44362 6.35376 9.1585 5.71223Z"
+              stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
+          </svg></a>
+
+        <!-- EMAIL -->
+        <a
+          href="mailto:flores.charlesadrian@gmail.com?subject=Portfolio%20Inquiry%20-%20Let's%20Collaborate!&body=Hi%20there%2C%0D%0A%0D%0AI%20was%20exploring%20your%20portfolio%20and%20was%20really%20impressed%20with%20your%20work!%20I%E2%80%99d%20love%20to%20discuss%20potential%20opportunities%20for%20collaboration%20or%20ask%20a%20few%20questions%20about%20your%20projects.%0D%0A%0D%0ALooking%20forward%20to%20hearing%20from%20you!%0D%0A%0D%0ABest%20regards%2C%0D%0A%5BYour%20Name%5D"><svg
+            class="svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20" color="#c2c6cb"
+            fill="none">
+            <path d="M7.00235 7.75L9.94437 9.48943C11.6596 10.5035 12.3451 10.5035 14.0603 9.48943L17.0023 7.75"
+              stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+            <path
+              d="M21.9977 10.75V9.77844C21.9323 6.71114 21.8996 5.17749 20.7679 4.04141C19.6361 2.90532 18.061 2.86574 14.9107 2.78659C12.9692 2.73781 11.0467 2.7378 9.10511 2.78658C5.95487 2.86573 4.37975 2.9053 3.24799 4.04139C2.11624 5.17748 2.08353 6.71113 2.01812 9.77843C1.99709 10.7647 1.99709 11.7451 2.01812 12.7314C2.08354 15.7987 2.11624 17.3323 3.248 18.4684C4.37975 19.6045 5.95487 19.6441 9.10512 19.7232C9.57337 19.735 10.5358 19.7439 11.0024 19.75"
+              stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+            <path
+              d="M20.8546 13.6893L21.547 14.3817C22.1327 14.9675 22.1327 15.9172 21.547 16.503L17.9196 20.1987C17.6342 20.484 17.2692 20.6764 16.8725 20.7505L14.6244 21.2385C14.2694 21.3156 13.9533 21.0004 14.0294 20.6452L14.5079 18.4099C14.582 18.0132 14.7743 17.6482 15.0597 17.3629L18.7333 13.6893C19.3191 13.1036 20.2688 13.1036 20.8546 13.6893Z"
+              stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+          </svg></a>
+
+        <div class="divider"></div>
+
+
+        <a href="#" id="light__mode"><svg class="sun" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="25"
+            height="25" color="#c2c6cb" fill="none">
+            <path
+              d="M17 12C17 14.7614 14.7614 17 12 17C9.23858 17 7 14.7614 7 12C7 9.23858 9.23858 7 12 7C14.7614 7 17 9.23858 17 12Z"
+              stroke="currentColor" stroke-width="1.5" />
+            <path
+              d="M12 2V3.5M12 20.5V22M19.0708 19.0713L18.0101 18.0106M5.98926 5.98926L4.9286 4.9286M22 12H20.5M3.5 12H2M19.0713 4.92871L18.0106 5.98937M5.98975 18.0107L4.92909 19.0714"
+              stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
+          </svg></a>
+      </nav>
+    </div>
+
   </header>
 
 
@@ -859,63 +214,154 @@
   <main class="mainContent" id="main">
     <!-- ABOUT SECTION -->
     <section id="about">
-      <h2 id="header-h2">ABOUT</h2>
-      <p>I grew up in <a class="mentioned__links">Tapaz, Capiz</a>, and people always said I was a math whiz (now, I'm
-        not lol, college humbled me fr💀).
-        So, I followed their advice and studied Civil Engineering. But honestly, my heart was more into coding. Now, I'm
-        practicing to be a front-end developer.</p>
-      <p>As a hobby, I love taking pictures. I was even asked to be a photojournalist for <a
-          href="https://www.facebook.com/fcuthes" target="_blank" class="mentioned__links">The Hillside Echo -
-          Senior</a> during <a href="https://www.facebook.com/OfficialFCUPage" target="_blank"
-          class="mentioned__links">Filamer Christian University</a>'s <a
-          href="https://www.facebook.com/fcuthes/posts/718351036979716" target="_blank" class="mentioned__links">119th
-          Foundation Anniversary</a>.</p>
+      <h2 class="about">ABOUT</h2>
+      <p class="p1">
+
+        I’m a <a class="mentioned__links " style="font-weight: 700;">Civil Engineering</a> student with a passion for
+        designing and improving
+        structures. I’ve also had the
+        opportunity to contribute by <a class="mentioned__links">documenting</a> events, like during <a
+          href="https://www.facebook.com/OfficialFCUPage" class="mentioned__links" target="_blank">Filamer Christian
+          University</a>’s <a href="https://www.facebook.com/fcuthes/posts/718351036979716" class="mentioned__links"
+          target="_blank">
+          119th Foundation
+          Anniversary
+        </a> for <a href="https://www.facebook.com/fcuthes" class="mentioned__links" target="_blank">The Hillside Echo -
+          Senior</a> and
+        <a href="https://www.facebook.com/capsumainofficial" class="mentioned__links" target="_blank">
+          Capiz State University - Main
+          Campus</a>’ <a class="mentioned__links">Intramurals</a> for <a
+          href="https://www.facebook.com/profile.php?id=61550888018670" target="_blank" class="mentioned__links">Pundar
+          Publication</a>.
+      </p>
+      <p class="p2">These experiences taught me the importance of keeping track of important events and projects.</p>
+
       <div id="spot"></div>
-      <p>When I'm not in a computer, I usually hangout with <span class="spot">Spot</span>, doing house chores, or maybe
-        in the bathroom? kidding. Anyway, I'm always down to try new things and learn from my experiences. I believe
-        that mistakes are just part of the journey.</p>
+      <p class="p3">When I'm not working on assignments, I usually hangout with <span class="spot"
+          style="font-weight: 700;">Spot</span>, or usually in the corner, having an existential crisis about my
+        engineering degree, lol. I also want to learn <a class="mentioned__links">AutoCAD</a> so I can plan buildings
+        and houses in the future.
+      </p>
+      <p class="p4">Always willing to try new things and learn from experiences. Mistakes happen and help with
+        learning.</p>
     </section>
+
+
+    <!-- <section id="education">
+      <h2 class="education">EDUCATION</h2>
+
+
+    </section> -->
+
+
+
 
     <!-- SKILLS SECTION -->
     <section id="skills">
-      <h2 id="header-h2">Skills</h2>
-      <div class="skills__container">
-        <!-- HTML Skill -->
-        <div class="bar__graph">
-          <p class="h2-skill"><i class="fa-brands fa-html5" style="color: #f06529;"></i>HTML</p>
-          <div class="progress__bar">
-            <div class="progress__fill" style="width: 0%;" data-percentage="90"></div>
+      <h2 class="skills" style="margin-bottom: 1.5em;">Skills</h2>
+
+
+      <!-- Web Dev -->
+      <div class="skills__container" data-sr-id="6">
+        <div class="skills-box">
+          <div class="skills__icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="44" height="44" color="#c2c6cb"
+              fill="none">
+              <path
+                d="M16 10L17.2265 11.0572C17.7422 11.5016 18 11.7239 18 12C18 12.2761 17.7422 12.4984 17.2265 12.9428L16 14"
+                stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+              <path
+                d="M8 10L6.77346 11.0572C6.25782 11.5016 6 11.7239 6 12C6 12.2761 6.25782 12.4984 6.77346 12.9428L8 14"
+                stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+              <path d="M13 9L11 15" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                stroke-linejoin="round" />
+              <path
+                d="M2.5 12C2.5 7.52166 2.5 5.28249 3.89124 3.89124C5.28249 2.5 7.52166 2.5 12 2.5C16.4783 2.5 18.7175 2.5 20.1088 3.89124C21.5 5.28249 21.5 7.52166 21.5 12C21.5 16.4783 21.5 18.7175 20.1088 20.1088C18.7175 21.5 16.4783 21.5 12 21.5C7.52166 21.5 5.28249 21.5 3.89124 20.1088C2.5 18.7175 2.5 16.4783 2.5 12Z"
+                stroke="currentColor" stroke-width="1.5" />
+            </svg>
           </div>
-          <p class="percentage">90%</p>
+          <div class="skills__tit">
+            <h3>Web Development</h3>
+          </div>
+
+          <div class="skills__desc">
+            <p class="p5">A beginner who is just starting their journey in web development and is eager to learn the
+              fundamentals
+              of building
+              websites and web applications.</p>
+          </div>
+
         </div>
 
-        <!-- CSS Skill -->
-        <div class="bar__graph">
-          <p class="h2-skill"><i class="fa-brands fa-css3-alt" style="color: #2965f1;"></i>CSS</p>
-          <div class="progress__bar">
-            <div class="progress__fill" style="width: 0%;" data-percentage="85"></div>
-          </div>
-          <p class="percentage">85%</p>
-        </div>
 
-        <!-- JavaScript Skill -->
-        <div class="bar__graph">
-          <p class="h2-skill"><i class="fa-brands fa-js" style="color: #f0db4f;"></i>JavaScript</p>
-          <div class="progress__bar">
-            <div class="progress__fill" style="width: 0%;" data-percentage="30"></div>
-          </div>
-          <p class="percentage">30%</p>
-        </div>
+        <!-- Photography -->
+        <div class="skills__container" data-sr-id="6">
+          <div class="skills-box">
+            <div class="skills__icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="44" height="44" color="#c2c6cb"
+                fill="none">
+                <path
+                  d="M17 6C19.3456 6 20.0184 6 20.8263 6.61994C21.0343 6.77954 21.2205 6.96572 21.3801 7.17372C22 7.98164 22 9.15442 22 11.5V16C22 18.8284 22 20.2426 21.1213 21.1213C20.2426 22 18.8284 22 16 22H8C5.17157 22 3.75736 22 2.87868 21.1213C2 20.2426 2 18.8284 2 16V11.5C2 9.15442 2 7.98164 2.61994 7.17372C2.77954 6.96572 2.96572 6.77954 3.17372 6.61994C3.98164 6 4.65442 6 7 6"
+                  stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
+                <path
+                  d="M17 7L16.1142 4.78543C15.732 3.82996 15.3994 2.7461 14.4166 2.25955C13.8924 2 13.2616 2 12 2C10.7384 2 10.1076 2 9.58335 2.25955C8.6006 2.7461 8.26801 3.82996 7.88583 4.78543L7 7"
+                  stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                <path
+                  d="M15.5 14C15.5 15.933 13.933 17.5 12 17.5C10.067 17.5 8.5 15.933 8.5 14C8.5 12.067 10.067 10.5 12 10.5C13.933 10.5 15.5 12.067 15.5 14Z"
+                  stroke="currentColor" stroke-width="1.5" />
+                <path d="M11.9998 6H12.0088" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                  stroke-linejoin="round" />
+              </svg>
+            </div>
+            <div class="skills__tit">
+              <h3>Photography</h3>
+            </div>
 
-        <!-- Photography Skill -->
-        <div class="bar__graph">
-          <p class="h2-skill"><i class="fa-solid fa-camera-retro"></i>Photography</p>
-          <div class="progress__bar">
-            <div class="progress__fill" style="width: 0%;" data-percentage="60"></div>
+            <div class="skills__desc">
+              <p class="p6">An experienced photographer eager to capture every moment and detail, showcasing the beauty
+                and emotion
+                in every shot.</p>
+            </div>
+
+
           </div>
-          <p span class="percentage">60% </p>
+
+
+          <!-- Technical -->
+          <div class="skills__container" data-sr-id="6">
+            <div class="skills-box">
+              <div class="skills__icon">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="44" height="44" color="#c2c6cb"
+                  fill="none">
+                  <path d="M20 15V13.5M4 15V7C4 5.11438 4 4.17157 4.58579 3.58579C5.17157 3 6.11438 3 8 3H11"
+                    stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                  <path
+                    d="M18 9.71428V11M18 9.71428C16.8432 9.71428 15.8241 9.14608 15.2263 8.28331M18 9.71428C19.1568 9.71428 20.1759 9.14608 20.7737 8.28331M18 3.28571C19.1569 3.28571 20.1761 3.854 20.7738 4.71688M18 3.28571C16.8431 3.28571 15.8239 3.854 15.2262 4.71688M18 3.28571V2M22 3.92857L20.7738 4.71688M14.0004 9.07143L15.2263 8.28331M14 3.92857L15.2262 4.71688M21.9996 9.07143L20.7737 8.28331M20.7738 4.71688C21.1273 5.22711 21.3333 5.84035 21.3333 6.5C21.3333 7.15973 21.1272 7.77304 20.7737 8.28331M15.2262 4.71688C14.8727 5.22711 14.6667 5.84035 14.6667 6.5C14.6667 7.15973 14.8728 7.77304 15.2263 8.28331"
+                    stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
+                  <path
+                    d="M3.49762 16.0154L4.01953 15H19.9518L20.5023 16.0154C21.9452 18.677 22.3046 20.0077 21.7561 21.0039C21.2077 22 19.7536 22 16.8454 22L7.15462 22C4.24642 22 2.79231 22 2.24387 21.0039C1.69543 20.0077 2.05474 18.677 3.49762 16.0154Z"
+                    stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+              </div>
+              <div class="skills__tit">
+                <h3>Technical</h3>
+              </div>
+              <div class="skills__desc">
+                <p class="p7">A skilled individual with technical expertise in software tools and technologies, capable
+                  of
+                  implementing effective solutions.</p>
+              </div>
+
+
+            </div>
+
+
+          </div>
         </div>
       </div>
+
+
+
     </section>
 
 
@@ -923,113 +369,63 @@
     <!-- PROJECTS SECTION -->
     <section id="projects" class="projects__section">
       <div class="projects__header">
-        <h2 id="header-h2">Projects</h2>
+        <h2 class="project" style="margin-bottom: 1.5em;">Projects</h2>
       </div>
       <ul class="projects__list">
 
 
-        <!-- Project Card 1 -->
-        <li class="project__item">
-          <div class="project__card group">
-            <header class="project__header" aria-label="Image">
-            </header>
-            <div class="project__content">
+        <!-- PROJECT 1 -->
 
-              <h3 class="project__title">
-                <a class="project__link" href="https://fcu-darwin1223-24.vercel.app/" target="_blank"
-                  rel="noreferrer noopener" aria-label="Darwin's Memoir">
-                  Darwin's Memoir · Filamer Christian University
-                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="project__icon"
-                    aria-hidden="true">
-                    <path fill-rule="evenodd"
-                      d="M5.22 14.78a.75.75 0 001.06 0l7.22-7.22v5.69a.75.75 0 001.5 0v-7.5a.75.75 0 00-.75-.75h-7.5a.75.75 0 000 1.5h5.69l-7.22 7.22a.75.75 0 000 1.06z"
-                      clip-rule="evenodd" />
-                  </svg>
-                </a>
-              </h3>
-              <p class="project__description">
-                This website is dedicated to the alumni of the Darwin Section from the recent graduating batch of
-                2023-2024. Here, you
-                can relive your memories of graduation and celebrate your achievements.
-              </p>
-              <ul class="project__tags" aria-label="Technologies used">
-                <li class="tag__item">JavaScript</li>
-                <li class="tag__item">HTML</li>
-                <li class="tag__item">CSS</li>
-              </ul>
+        <li class="project__item">
+          <a href="https://fcu-darwin1223-24.vercel.app/" target="_blank"
+            style="text-decoration: none; cursor: pointer; ">
+            <img src="/assets/images/Project1.png" alt="Generated Image" class="project__image">
+            <div class="card-content">
+              <h2 class="card-title">Darwin's Memoir</h2>
+              <div class="dividerh"></div>
+              <p class="card-description">A collection of memories from Darwin’s senior high journey, cherishing
+                achievements and connections.</p>
+              <span class="date" style="font-size: 0.7rem;  ">
+                July 20, 2024
+              </span>
             </div>
-          </div>
+          </a>
         </li>
 
 
-        <!-- Project Card 2 -->
+
 
         <li class="project__item">
-          <div class="project__card group">
-            <header class="project__header" aria-label="Image">
-            </header>
-            <div class="project__content">
-              <h3 class="project__title">
-                <a class="project__link" href="https://www.playbook.com/s/litrato-by-charles/beyeCiXNqqBAdEWHDcTEW1nu"
-                  target="_blank" rel="noreferrer noopener" aria-label="Pre-debut Photoshoot">
-                  Pre-debut Photoshoot
-                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="project__icon"
-                    aria-hidden="true">
-                    <path fill-rule="evenodd"
-                      d="M5.22 14.78a.75.75 0 001.06 0l7.22-7.22v5.69a.75.75 0 001.5 0v-7.5a.75.75 0 00-.75-.75h-7.5a.75.75 0 000 1.5h5.69l-7.22 7.22a.75.75 0 000 1.06z"
-                      clip-rule="evenodd" />
-                  </svg>
-                </a>
-              </h3>
-              <p class="project__description">
-                Capture timeless moments at the iconic Ruins of Alcatraz in Roxas City, blending the rustic beauty of
-                the historic site
-                with the elegance of a pre-debut photoshoot. The weathered walls and scenic backdrop create the
-                perfect
-                setting to
-                celebrate the transition into adulthood with grace and style.
-              </p>
-              <ul class="project__tags" aria-label="Technologies used">
-                <li class="tag__item">Photography</li>
-                <li class="tag__item">Playbook</li>
-              </ul>
+          <a href="https://www.playbook.com/s/litrato-by-charles/beyeCiXNqqBAdEWHDcTEW1nu" target="_blank"
+            style="text-decoration: none; cursor: pointer; ">
+            <img src="/assets/images/Project2.jpg" alt="Generated Image" class="project__image">
+            <div class="card-content">
+              <h2 class="card-title">Pre-Debut Photoshoot</h2>
+              <div class="dividerh"></div>
+              <p style="text-decoration: none;" class="card-description">A creative pre-debut photoshoot featuring
+                Lavigne Lyka, designed to celebrate
+                her transition into adulthood.</p>
+              <span class="date" style="font-size: 0.7rem;  ">
+                March 14, 2024
+              </span>
             </div>
-          </div>
+          </a>
         </li>
 
 
-        <!-- Project Card 3 -->
+        <!-- 
         <li class="project__item">
-          <div class="project__card group">
-            <header class="project__header" aria-label="Image">
-            </header>
-            <div class="project__content">
 
-              <h3 class="project__title">
-                <a class="project__link"
-                  href="https://support.content.office.net/en-us/media/ae96ee4a-1ae6-4d62-a018-0733cb71f5dd.png"
-                  target="_blank" rel="noreferrer noopener" aria-label="To be displayed">
-                  To be displayed
-                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="project__icon"
-                    aria-hidden="true">
-                    <path fill-rule="evenodd"
-                      d="M5.22 14.78a.75.75 0 001.06 0l7.22-7.22v5.69a.75.75 0 001.5 0v-7.5a.75.75 0 00-.75-.75h-7.5a.75.75 0 000 1.5h5.69l-7.22 7.22a.75.75 0 000 1.06z"
-                      clip-rule="evenodd" />
-                  </svg>
-                </a>
-              </h3>
-              <p class="project__description">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Non praesentium quisquam blanditiis
-                consectetur! Autem atque vitae amet magni delectus qui repellat? Dolorem, nobis? Reiciendis, quidem quae
-                officiis qui quam ipsa!
-              </p>
-              <ul class="project__tags" aria-label="Technologies used">
-                <li class="tag__item">None</li>
-
-              </ul>
-            </div>
+          <img src="/Port/assets/images/Project3.jpg" alt="Generated Image" class="project__image">
+          <div class="card-content">
+            <h2 class="card-title">Pre-Debut Photoshoot</h2>
+            <p class="card-description">This is a sample card description.</p>
           </div>
-        </li>
+        </li> -->
+
+
+
+
 
     </section>
 
@@ -1039,169 +435,38 @@
 
     <!-- EXPERIENCE SECTION -->
     <section id="experience">
-      <h2 id="header-h2">EXPERIENCE</h2>
-      <p>As a college student, it's completely understandable that I may not have an experience yet.</p>
+      <h2 class="experience">EXPERIENCE</h2>
+      <p class="p8">As a student, it's completely understandable that I may not have an experience yet. However, here's
+        what I can share about my educational journey:</p>
       <ul class="experience__list">
-        <li class="experience__item">
-          <div class="experience__card group">
-            <header class="experience__header" aria-label="Image">
-            </header>
-            <div class="experience__content">
 
-              <h3 class="experience__title">
-                FireGuard: A Fire and Smoke Detecting Robot
-              </h3>
-              <p class="experience__description">
-                FireGuard is a robot designed to detect fires and gas leaks, alert users, and extinguish flames using an
-                integrated
-                water pump. This project is part of the Capstone course in Grade 12.
-              </p>
-              <ul class="experience__tags" aria-label="Technologies used">
-                <li class="tag__item">C++</li>
-              </ul>
+        <li class="project__item">
+
+          <img src="/assets/images/capstone.jpg" alt="Generated Image" class="project__image">
+          <div class="card-content">
+            <h2 class="card-title">FireGuard: A Fire and Smoke Detecting Robot</h2>
+            <div class="dividerh"></div>
+            <p style="text-decoration: none;" class="card-description">A robot that detects fires, senses gas leaks,
+              alerts users, and extinguishes flames with a water pump.</p>
+            <span class="date" style="font-size: 0.7rem; ">
+              May 4, 2024
+            </span>
+          </div>
+
+        </li>
+
+
+
+
       </ul>
       </div>
       </div>
       </li>
     </section>
-    <p style="color: var(--textcolor) ;">This design was inspired by <a href="https://brittanychiang.com/"
-        class="mentioned__links">Brittany
-        Chiang</a>. All text is set in the Inter typeface.</p>
   </main>
 
-  <script>
+  <script src="/assets/js/script.js"></script>
 
-    window.addEventListener('scroll', function () {
-      const heading = document.getElementById('header-h2');
-      const padding = parseFloat(getComputedStyle(document.querySelector('.mainContent')).paddingTop);
-      const offset = heading.offsetTop - padding;
-
-      if (window.scrollY > offset) {
-        heading.classList.add('sticky__background');
-      } else {
-        heading.classList.remove('sticky__background');
-      }
-    });
-
-
-    window.onload = function () {
-      // Scroll to the top of the page
-      window.scrollTo(0, 0);
-    };
-
-    function updateActiveNav() {
-      const sections = document.querySelectorAll('main section');
-      const navLinks = document.querySelectorAll('nav ul li a');
-
-      let currentSection = '';
-
-      sections.forEach(section => {
-        const sectionTop = section.offsetTop;
-        const sectionHeight = section.offsetHeight;
-        const scrollPosition = window.scrollY + window.innerHeight / 2;
-
-        if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
-          currentSection = section.getAttribute('id');
-        }
-      });
-
-      navLinks.forEach(link => {
-        link.classList.remove('active');
-        if (link.getAttribute('href') === `#${currentSection}`) {
-          link.classList.add('active');
-        }
-      });
-    }
-
-    window.addEventListener('scroll', updateActiveNav);
-    document.addEventListener('DOMContentLoaded', updateActiveNav);
-
-    document.querySelectorAll('nav ul li a').forEach(link => {
-      link.addEventListener('click', function () {
-        document.querySelectorAll('nav ul li a').forEach(a => a.classList.remove('active'));
-        this.classList.add('active');
-      });
-    });
-
-    document.addEventListener('mousemove', function (e) {
-      const cursor = document.getElementById('cursor__highlight');
-      cursor.style.left = `${e.clientX}px`;
-      cursor.style.top = `${e.clientY}px`;
-    });
-
-    const hoverText = document.querySelector('.spot');
-    const popupImage = document.getElementById('spot');
-
-    hoverText.addEventListener('mousemove', (e) => {
-      // Show the image
-      popupImage.style.display = 'block';
-
-      popupImage.style.left = `${e.pageX - popupImage.offsetWidth / 2}px`;
-      popupImage.style.top = `${e.pageY - popupImage.offsetHeight}px`;
-    });
-
-    hoverText.addEventListener('mouseleave', () => {
-      // Hide the image when the cursor leaves the text
-      popupImage.style.display = 'none';
-    });
-
-    document.addEventListener('DOMContentLoaded', function () {
-      const progressBars = document.querySelectorAll('.progress__fill');
-
-      progressBars.forEach(bar => {
-        const percentage = bar.getAttribute('data-percentage');
-        bar.style.width = `${percentage}%`;
-      });
-    });
-
-    document.addEventListener('DOMContentLoaded', function () {
-      // Select all navigation links
-      const navLinks = document.querySelectorAll('.nav__link');
-
-      // Add click event listener to each link
-      navLinks.forEach(link => {
-        link.addEventListener('click', function () {
-          // Remove 'active' class from all links
-          navLinks.forEach(link => link.classList.remove('active'));
-
-          // Add 'active' class to the clicked link
-          this.classList.add('active');
-        });
-      });
-    });
-
-    document.addEventListener('DOMContentLoaded', function () {
-      // Function to scroll to the top of the page
-      function scrollToTop() {
-        window.scrollTo({ top: 0, behavior: 'smooth' });
-      }
-
-      // Add event listener to the "ABOUT" nav link
-      const aboutNavLink = document.querySelector('a[href="#about"]');
-      if (aboutNavLink) {
-        aboutNavLink.addEventListener('click', function (event) {
-          // Prevent default anchor behavior
-          event.preventDefault();
-          scrollToTop();
-
-          // Optionally, you can manually navigate to the "ABOUT" section after scrolling to the top
-          // Uncomment the following line if you want to scroll to the "ABOUT" section smoothly after scrolling to the top
-          // setTimeout(() => document.querySelector('#about').scrollIntoView({ behavior: 'smooth' }), 300);
-        });
-      }
-
-      // Add event listener to the "header__name"
-      const headerName = document.querySelector('.header__name');
-      if (headerName) {
-        headerName.addEventListener('click', function () {
-          scrollToTop();
-        });
-      }
-    });
-
-
-
-  </script>
 </body>
 
 </html>

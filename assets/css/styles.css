@@ -242,7 +242,7 @@ header {
     }
 
     .headerTop .social__icons svg {
-        margin-right: 1.8rem;
+        margin-right: 1.4rem;
         font-size: 1.6rem;
     }
 
@@ -257,6 +257,7 @@ header {
 
     body {
         padding: 7rem;
+
     }
 
     header {
@@ -390,6 +391,11 @@ header {
     .mainContent .experience__card .experience__content {
         padding-left: 1.5rem;
     }
+
+    .card-description {
+        font-size: 0.7em;
+        text-decoration: none;
+    }
 }
 
 
@@ -421,7 +427,7 @@ header .nav__links {
 }
 
 header .nav__links li {
-    margin: 1rem 0;
+    margin: 1.4rem 0;
 }
 
 header .nav__links a {
@@ -545,6 +551,7 @@ main p {
 
 .mentioned__links:hover {
     color: var(--teal-highlight);
+    cursor: pointer;
 }
 
 .spot {
@@ -601,10 +608,12 @@ main p {
     margin-bottom: 1rem;
     border: 1px solid var(--bar-highlight);
     border-radius: 20px;
-    background-color: transparent;
+    background-color: var(--bg-color);
     padding: 3rem 2rem 3rem;
     color: var(--bar-highlight);
     text-align: justify;
+
+
 
 }
 
@@ -642,7 +651,7 @@ main p {
 
 
 .project__item {
-    flex: 1 1 15rem;
+    flex: 1 1 50rem;
     transition: transform 0.2s ease-in-out;
     margin: 1%;
     box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
@@ -676,7 +685,8 @@ main p {
 
 .card-description {
     color: var(--text-color);
-    font-size: 1em;
+    font-size: 0.845em;
+    text-decoration: none;
 }
 
 
@@ -684,6 +694,8 @@ main p {
 
 .date {
     color: var(--teal-highlight);
+    font-weight: bold;
+    text-transform: uppercase;
 }
 
 .experience__list {

@@ -157,6 +157,8 @@ ScrollReveal().reveal('', { origin: 'top' });
 
 ScrollReveal().reveal('.navBarContainer, .about, .skills, .education, .project, .experience, .skills__tit, .p1, .p2, .p3, .p4, .p5, .p6, .p7, .p8, .skills-box, .skills__icon, .skills__desc, .project__item', { origin: 'bottom' });
 
-ScrollReveal().reveal('.header__name, .header__program, .header__bio, .nav__links, .social__icons', { origin: 'left' });
+ScrollReveal().reveal('.header__, .header__bio, .nav__links, .social__icons', { origin: 'left' });
 
 ScrollReveal().reveal('', { origin: 'right' });
+
+

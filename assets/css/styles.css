@@ -16,18 +16,6 @@
     --silak: #fff;
     --cursor-highlight: #244da52f;
 
-    /* FONT SIZE */
-    --fs-xxxxsmall: 8px;
-    --fs-xxxsmall: 10px;
-    --fs-xxsmall: 12px;
-    --fs-xsmall: 14px;
-    --fs-small: 15px;
-    --fs-medium-small: 16px;
-    --fs-medium: 17px;
-    --fs-medium-large: 18px;
-    --fs-large: 19px;
-    --fs-xlarge: 20px;
-    --fs-xxlarge: 21px;
 
 }
 
@@ -330,10 +318,6 @@ header {
 
     }
 
-    .header__ {
-        position: sticky;
-        top: 2;
-    }
 
     .skills__container {
         display: flex;

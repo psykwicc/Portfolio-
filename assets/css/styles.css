@@ -16,7 +16,6 @@
     --silak: #fff;
     --cursor-highlight: #244da52f;
 
-
 }
 
 .light-mode {
@@ -89,7 +88,7 @@ html {
     transition: transform 0.1s ease;
     box-shadow: 0 0 256px 256px #244da52f;
     border-radius: 50%;
-    background-color: var();
+
 }
 
 
@@ -126,7 +125,7 @@ header {
     align-items: center;
     justify-items: center;
     transform: translateX(-50%);
-    z-index: 99999999;
+    z-index: 9999;
     margin-bottom: 1.5vh;
     text-align: center;
 }
@@ -169,9 +168,7 @@ header {
         height: 18;
     }
 
-    .navbar {
-        padding: 7px 10px;
-    }
+
 
 
 
@@ -349,6 +346,7 @@ header {
     .profilepng {
         object-fit: contain;
         border-radius: 50%;
+        aspect-ratio: 1 / 1;
         width: 20%;
         height: auto;
         border: 1px solid var(--bar-highlight);
@@ -357,12 +355,46 @@ header {
 
 }
 
+@media (min-width: 768px) and (max-width: 1023px) {
+    .biot {
+        margin-top: 2.5em;
+    }
+}
+
 @media (max-width: 768px) {
+
+    .header__ {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 0.5em;
+    }
+
+
+
+    .biot {
+        display: flex;
+
+        justify-content: center;
+
+        padding-top: 1.5em;
+
+    }
+
+    .header__bio {
+        margin-top: 0;
+
+        font-size: 1em;
+        text-align: center;
+
+    }
 
 
 
     .headerTop .header__name {
         font-size: 1.2rem;
+        margin-top: 1em;
     }
 
 
@@ -666,12 +698,29 @@ main p {
 
 .project__item {
     flex: 1 1 50rem;
-    transition: transform 0.2s ease-in-out;
     margin: 1%;
     box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
     border-radius: 20px;
     overflow: hidden;
     border: 1px solid var(--bar-highlight);
+    transition: transform 0.1 ease, box-shadow 0.1s ease;
+}
+
+.project__item svg {
+    color: var(--wht);
+    transition: transform 0.5s ease, color 0.5s ease;
+    width: 18;
+    height: auto;
+}
+
+.project__item:hover {
+    transform: translateY(-5px) !important;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15) !important;
+}
+
+.project__item:hover svg {
+    transform: translateX(5px);
+    color: var(--teal-highlight);
 }
 
 .project__image {
@@ -711,6 +760,15 @@ main p {
     color: var(--teal-highlight);
     font-weight: bold;
     text-transform: uppercase;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+
+.date svg {
+    color: var(--wht);
+    margin-left: 0.4em;
+
 }
 
 .experience__list {

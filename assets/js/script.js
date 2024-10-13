@@ -150,7 +150,8 @@ ScrollReveal({
     // reset: true,
     distance: '80px',
     duration: 1800,
-    delay: 185
+    delay: 200,
+    reset: false
 });
 
 ScrollReveal().reveal('', { origin: 'top' });
@@ -161,4 +162,10 @@ ScrollReveal().reveal('.header__, .header__bio, .nav__links, .social__icons', { 
 
 ScrollReveal().reveal('', { origin: 'right' });
 
-
+ScrollReveal().reveal('.project__item', {
+    duration: 1800,
+    delay: 0,
+    afterReveal: function (el) {
+        el.style.transition = 'all 0.5s';  // Ensure hover effects kick in after the reveal animation
+    }
+});

@@ -146,6 +146,13 @@ header {
 
 .navbar .svg {
     color: var(--wht);
+    transition: background-color 0.5s ease;
+}
+
+.navbar svg:active {
+    background-color: #244da52f;
+    border-radius: 50%;
+
 }
 
 .skills__icon svg {
@@ -772,7 +779,12 @@ main p {
 }
 
 .experience__list {
+
+    grid-gap: 1rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(17rem, 1fr));
     margin: 0;
     padding: 0;
     list-style: none;
+    padding-bottom: 3.5em;
 }
